@@ -141,8 +141,8 @@
             <div class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]">
                 <div class="user-text active-text">
                     <p class="md:text-2xl mb-6">"WiseFinance a transformé ma façon de gérer mes finances. Les formations interactives sont incroyablement instructives, et le support 24/24 a répondu à toutes mes questions, même les plus pointues. Merci WiseFinance pour cette expérience exceptionnelle !" </p>
-                    <h4 class="font-bold text-color-secondary mb-1">Sophie Martin</h4>
-                    <p>Entrepreneure</p>
+                    <h4 class="font-bold text-color-secondary mb-1">Bogre Martin</h4>
+                    <p>Entrepreneur</p>
                 </div>
 
                 <div class="user-text">
