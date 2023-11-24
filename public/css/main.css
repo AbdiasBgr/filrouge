@@ -1639,3 +1639,15 @@ video {
 .question input[type="checkbox"]:checked ~ .title svg {
   transform: rotate(180deg);
 }
+
+
+
+
+/* Cover Section App */
+ #download-app {
+  background-image: url('/images/App.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+} 

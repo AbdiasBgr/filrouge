@@ -1,45 +1,37 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
+
 /** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+    ],
 
-
-const plugin = require('tailwindcss/plugin');
-
-const rotateY = plugin(function ({ addUtilities }) {
-  addUtilities ({
-    '.rotate-y-180': {
-      transform: "rotateY(180deg)"
+    theme: {
+        extend: {
+            colors: {
+                "color-primary": "#01051e",
+                "color-primary-light": "#020726",
+                "color-primary-dark": "#010417",
+                "color-secondary": "#ff7d3b",
+                "color-gray": "#333",
+                "color-white": "#fff",
+                "color-blob": "#A427DF",
+            },
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+        },
+        container: {
+            center: true,
+            padding: {
+              DEFAULT: '20px',
+              md: "50px"
+            },
+          }
     },
-    '.-rotate-y-180': {
-      transform: "rotateY(-180deg)"
-    }
-  })
-})
 
-module.exports = {
-  content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        "color-primary": "#01051e",
-        "color-primary-light": "#020726",
-        "color-primary-dark": "#010417",
-        "color-secondary": "#ff7d3b",
-        "color-gray": "#333",
-        "color-white": "#fff",
-        "color-blob": "#A427DF",
-
-      }
-    },
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: '20px',
-        md: '50px',
-      }
-    }
-  },
-  plugins: [rotateY],
-}
+    plugins: [forms],
+};

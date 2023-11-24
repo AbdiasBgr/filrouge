@@ -12,7 +12,7 @@
             <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
                 <h1 class="title mb-4">Élevez vos Finances, Bâtissez votre Avenir.</h1>
                 <p class="leading-relaxed mb-10">Découvrez les Clés de la Gestion Financière et de l'Investissement à Long Terme avec WiseFinance</p>
-                <button class="btn uppercase">Commencer mon Aventure</button>
+                <button class=" btn">Commencer mon Aventure</button>
             </div>
 
             <div class="md:w-1/2">
@@ -519,7 +519,7 @@
     </div>
 </section>
 
-<section id="download-app" class="bg-color-primary-light">
+<section id="download-app" >
     <div class="container h-[80vh] grid place-items-center">
         <div class="text-center md:w-2/3 m-auto">
             <h1 class="title">Téléchargez l'application maintenant et économisez votre argent</h1>

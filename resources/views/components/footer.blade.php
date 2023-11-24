@@ -45,7 +45,7 @@
                         <input type="text" class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Entrez votre adresse e-mail">
 
                         <button type="submit" class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90">
-                            <i class="fa-solid fa-chevron-right">S'inscrire</i>
+                            <i class="fa-solid fa-chevron-right">S'abonner</i>
                         </button>
                     </div>
                 </div>

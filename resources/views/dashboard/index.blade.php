@@ -1,9 +1,3 @@
-<x-app-layout>
-    <div name="header">
-        <h2 class="font-semibold text-xl text-orange-800 dark:text-gray-200 leading-tight">
-            Dashboard
-        </h2>
-    </div>
 <!-- component -->
 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
   <div class="mb-2 p-4">
@@ -41,7 +35,9 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5">
           <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd"></path>
         </svg>
-      </div>Profile
+      </div><x-dropdown-link :href="route('profile.edit')">
+        {{ __('Profile') }}
+      </x-dropdown-link>
     </div>
     <div role="button" tabindex="0" class="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
       <div class="grid place-items-center mr-4">
@@ -55,23 +51,21 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5">
           <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd"></path>
         </svg>
-      </div>Log Out
+      </div><!-- Authentication -->
+      <form method="POST" action="{{ route('logout') }}">
+        @csrf
+
+        <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+          {{ __('Log Out') }}
+        </x-dropdown-link>
+      </form>
     </div>
   </nav>
 </div>
 
 <div class="w-full pt-5 px-4 mb-8 mx-auto ">
-    <div class="text-sm text-gray-700 py-1">
-        Made with <a class="text-gray-700 font-semibold" href="https://www.material-tailwind.com/docs/react/sidebar?ref=tailwindcomponents" target="_blank">Material Tailwind</a> by <a href="https://www.creative-tim.com?ref=tailwindcomponents" class="text-gray-700 font-semibold" target="_blank"> Creative Tim</a>.
-    </div>
+  <div class="text-sm text-gray-700 py-1">
+    Made with <a class="text-gray-700 font-semibold" href="https://www.material-tailwind.com/docs/react/sidebar?ref=tailwindcomponents" target="_blank">Material Tailwind</a> by <a href="https://www.creative-tim.com?ref=tailwindcomponents" class="text-gray-700 font-semibold" target="_blank"> Creative Tim</a>.
+  </div>
 </div>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>

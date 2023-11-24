@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,8 @@
     <title>Banking website</title>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('js/styl.js') }}">
-    <!-- @vite('resources/css/app.css') -->
-    <!-- @vite('resources/js/app.js') -->
+     @vite('resources/css/app.css')
+    @vite('resources/js/app.js') 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -33,7 +33,7 @@
                 </ul>
             </div>
 
-            <!-- Mobile screen  -->
+             Mobile screen  
             <div id="hamburger" class="lg:hidden cursor-pointer z-50">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -51,7 +51,7 @@
                 </ul>
             </div>
         </nav>
-    </header>
+    </header> -->
 
     <main>
         <section id="home" class="relative">
@@ -761,8 +761,8 @@
 
         })
     </script>
-</body>
-</html>
+<!-- </body>
+</html> -->
 
 
 <!-- <div class="relative isolate px-6  lg:px-8">
