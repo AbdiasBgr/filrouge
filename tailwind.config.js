@@ -19,6 +19,7 @@ export default {
                 "color-gray": "#333",
                 "color-white": "#fff",
                 "color-blob": "#A427DF",
+                "color-log": "#010D50",
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
