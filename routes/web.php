@@ -3,7 +3,6 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConsultationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,18 +19,17 @@ Route::get('/', function () {
      return view('home');
 })->name('home');
 
-//Contact
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 Route::get('/contact/confirmation', [ContactController::class, 'showConfirmation'])->name('contact.confirmation');
 
 //Consultation
 Route::post('/consultation/submit', [ConsultationController::class, 'submit'])->name('consultation.submit');
 
+
 Route::get('/consultation', function () {
     return view('pages.consultation');
 })->name('pages.consultation');
 
-// Formations
 Route::get('/videolfa', function () {
     return view('pages.videolfa');
 })->name('videolfa');

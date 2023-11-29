@@ -43,6 +43,7 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')->searchable(),
+                Tables\Columns\TextColumn::make('content')->searchable(),
 
             ])
             ->filters([

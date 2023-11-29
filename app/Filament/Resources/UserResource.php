@@ -44,7 +44,7 @@ class UserResource extends Resource
                         ->maxLength(255),
                     Forms\Components\TextInput::make('telephone')
                         ->required()
-                        ->maxLength(13),
+                        ->maxLength(255),
                     Forms\Components\DateTimePicker::make('email_verified_at'),
                     Forms\Components\TextInput::make('password')
                         ->password()
@@ -69,6 +69,8 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('name')->searchable(),
                 Tables\Columns\TextColumn::make('email')->searchable(),
                 Tables\Columns\TextColumn::make('telephone')->searchable(),
+                TextColumn::make('roles.name')
+                ->searchable(),
                 Tables\Columns\TextColumn::make('email_verified_at')
                     ->dateTime()
                     ->sortable()
@@ -86,6 +88,7 @@ class UserResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),  
             ])

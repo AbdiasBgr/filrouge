@@ -18,6 +18,7 @@ class ContactResource extends Resource
     protected static ?string $model = Contact::class;
 
     protected static ?string $navigationIcon = 'heroicon-s-calendar-days';
+    
     protected static ?int $navigationSort = 2;
     protected static ?string $navigationGroup = 'Administration';
 
