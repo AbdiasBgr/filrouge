@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConsultationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,8 @@ Route::get('/videolfa', function () {
 Route::get('/videogfp', function () {
     return view('pages.videogfp');
 })->name('videogfp');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
