@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConsultationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +20,25 @@ Route::get('/', function () {
      return view('home');
 })->name('home');
 
-Route::get('/contact', function () {
-    return view('video');
-})->name('contact');
+//Contact
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
+Route::get('/contact/confirmation', [ContactController::class, 'showConfirmation'])->name('contact.confirmation');
+
+//Consultation
+Route::post('/consultation/submit', [ConsultationController::class, 'submit'])->name('consultation.submit');
+
+Route::get('/consultation', function () {
+    return view('pages.consultation');
+})->name('pages.consultation');
+
+// Formations
+Route::get('/videolfa', function () {
+    return view('pages.videolfa');
+})->name('videolfa');
+
+Route::get('/videogfp', function () {
+    return view('pages.videogfp');
+})->name('videogfp');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

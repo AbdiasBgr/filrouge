@@ -6,13 +6,13 @@
         </h2>
     </x-slot>
 
-    <div class="py-12 ml-9">
+     <div class="py-12 ml-9">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
+            <div class="bg-color-log text-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-white font-semibold text-3xl">
+                    {{ __(" Bienvenue , Vous êtes bien connecté!") }}
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 </x-layouts.formation>

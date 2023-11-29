@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Consultation;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
@@ -24,6 +25,7 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
+        'telephone',
     ];
 
     /**
@@ -40,11 +42,17 @@ class User extends Authenticatable implements FilamentUser
      * The attributes that should be cast.
      *
      * @var array<string, string>
-     */
+     */ 
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function consultations()
+    {
+        return $this->hasMany(Consultation::class);
+    }
+
      public function canAccessPanel(Panel $panel): bool
     {
          return $this->hasRole(['Admin','Writer','Moderator']);

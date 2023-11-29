@@ -14,9 +14,11 @@
     <header class="sticky top-0 z-50 block">
         @include('components.header')
     </header>
+    
     <main>
         @yield('content')
     </main>
+
     <footer>
         @include('components.footer')
     </footer>

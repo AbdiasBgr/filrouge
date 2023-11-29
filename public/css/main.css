@@ -1651,3 +1651,9 @@ video {
   background-position: center;
   height: 100vh;
 } 
+
+/* Youtube Embed */
+
+.ytvideo video{
+    aspect-ratio: 16 / 9;
+}  

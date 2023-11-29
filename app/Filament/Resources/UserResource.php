@@ -25,9 +25,9 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
     
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-s-user-group';
     protected static ?int $navigationSort = 1;
-    protected static ?string $navigationGroup = 'Settings';
+    protected static ?string $navigationGroup = 'Gestions des Utilisateurs';
 
  
     public static function form(Form $form): Form
@@ -42,6 +42,9 @@ class UserResource extends Resource
                         ->email()
                         ->required()
                         ->maxLength(255),
+                    Forms\Components\TextInput::make('telephone')
+                        ->required()
+                        ->maxLength(13),
                     Forms\Components\DateTimePicker::make('email_verified_at'),
                     Forms\Components\TextInput::make('password')
                         ->password()
@@ -65,6 +68,7 @@ class UserResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')->searchable(),
                 Tables\Columns\TextColumn::make('email')->searchable(),
+                Tables\Columns\TextColumn::make('telephone')->searchable(),
                 Tables\Columns\TextColumn::make('email_verified_at')
                     ->dateTime()
                     ->sortable()

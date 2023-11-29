@@ -1,7 +1,7 @@
    <nav class="h-max w-full max-w-full rounded-none  border-gray/80 bg-color-primary bg-opacity-80 px-4 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4  ">
        <div>
            <div class="container mx-auto flex items-center justify-between text-white-900 font-bold">
-               <a href="/home" class="mr-4 block cursor-pointer py-1.5 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+               <a href="/" class="mr-4 block cursor-pointer py-1.5 font-sans text-sm font-normal leading-normal text-inherit antialiased">
                    <img src="/images/logo2.png" alt="Logo du site" class="w-10 h-8">
                </a>
                <ul class="hidden items-center gap-6 lg:flex">
